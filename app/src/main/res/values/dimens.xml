@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- Floating Action Button dimensions -->
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- CardView dimensions -->
+    <dimen name="card_margin">6dp</dimen>
+    <dimen name="card_edge_radius">6dp</dimen>
+    <dimen name="card_elevation">6dp</dimen>
+
+</resources>

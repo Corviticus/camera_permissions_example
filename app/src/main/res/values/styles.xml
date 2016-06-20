@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:background">@color/transparent</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+    <!-- ************* Card View Style ************** -->
+    <style name="BasicCardViewStyle" parent="CardView">
+        <item name="cardBackgroundColor">@color/translucent_white</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="cardCornerRadius">@dimen/card_edge_radius</item>
+        <item name="android:clickable">true</item>
+        <item name="android:layout_margin">@dimen/card_margin</item>
+        <item name="android:layout_gravity">fill_horizontal|fill_vertical</item>
+    </style>
+
+    <style name="CircularProgress" parent="@android:style/Theme.Material.Light" >
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+</resources>
