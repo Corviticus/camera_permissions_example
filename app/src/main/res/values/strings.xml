@@ -9,10 +9,5 @@
 
     <string name="fragment_menu_name_about">About</string>
 
-    <string name="dialog_title">Use your Camera?</string>
-    <string name="dialog_message">Let the camera take a picture. \n
-        Nothing like staring at an empty ImageView to pass the day away.
-    </string>
-
 
 </resources>

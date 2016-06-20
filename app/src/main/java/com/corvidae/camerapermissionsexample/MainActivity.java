@@ -2,11 +2,9 @@ package com.corvidae.camerapermissionsexample;
 
 import android.Manifest;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.content.res.Resources;
@@ -123,20 +121,24 @@ public class MainActivity extends Activity {
     public void onResume(){
         super.onResume();
 
-        // only show Floating Action Button and ActionBar if no fragments on backstack
-       if (getFragmentManager().getBackStackEntryCount() > 0) {
-            _fab.hide();
-           getActionBar().hide();
-       } else {
-           _fab.show();
-           getActionBar().show();
-       }
+        // make sure we can get the ActionBar
+        if (getActionBar() != null) {
+
+            // only show Floating Action Button and ActionBar if no fragments on backstack
+            if (getFragmentManager().getBackStackEntryCount() > 0) {
+                 _fab.hide();
+                getActionBar().hide();
+            } else {
+                _fab.show();
+                getActionBar().show();
+            }
+        }
     }
 
     /**
      * Creates an 'overflow' options menu
-     * @param menu
-     * @return
+     * @param menu The menu into which the menu xml is inflated
+     * @return True to show the menu
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -150,7 +152,7 @@ public class MainActivity extends Activity {
     /**
      * Method is called when a menu item has been selected from the ActionBar
      * @param item The menu item selected
-     * @return
+     * @return Default behavior is to return False to allow 'normal processing' of item selection
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
